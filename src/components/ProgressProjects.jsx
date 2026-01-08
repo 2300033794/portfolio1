@@ -43,11 +43,12 @@ const ProgressProjects = () => {
     },
 
     {
-      title: '[UPCOMING PROJECT 2]',
-      description: '[Description of the project currently under development. Highlight the planned features and tech stack.]',
-      stack: [SiReact, SiTailwindcss],
-      githubUrl: 'https://github.com/yourusername/upcoming-project2',   
-    },
+  title: 'F1RACE LIST',
+  description: 'A responsive web application that displays Formula 1 race schedules and standings, with an integrated AI bot to provide race insights, driver stats, and quick summaries.',
+  stack: [SiReact, SiTailwindcss],
+  githubUrl: 'https://github.com/2300033794/F1RACE-REPO',
+}
+
   ];
 
   return (
