@@ -49,7 +49,7 @@ const Footer = () => {
           </h2>
 
           <p className="text-textMuted mb-8 max-w-md">
-            Building end-to-end web solutions with CI/CD and machine learning.
+            Building end-to-end web solutions with CI/CD & Machine Learning.
           </p>
 
           {/* Social Links */}
