@@ -1,6 +1,9 @@
 # This is my portfolio
 
- [Visit my portfolio](https://2300033794.github.io/portfolio1/)
+
+<a href="https://2300033794.github.io/portfolio1/" target="_blank" rel="noopener noreferrer">👉 Visit my portfolio</a>
+
+
 
 
 
