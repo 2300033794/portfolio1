@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
-import { SiReact, SiTailwindcss } from 'react-icons/si';
+import { FaGithub, FaLightbulb } from 'react-icons/fa';
+import { SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb } from 'react-icons/si';
+
+import researchhub from '../assets/projects/researchhub.png';
 
 /* ---------------- Project Card ---------------- */
 
@@ -10,6 +12,7 @@ const ProgressProjectCard = ({
   description,
   stack,
   githubUrl,
+  image,
   delay = 0,
 }) => {
   const isGithubAvailable = Boolean(githubUrl);
@@ -21,7 +24,7 @@ const ProgressProjectCard = ({
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
       transition={{ delay, duration: 0.3 }}
-      className="bg-card rounded-xl border border-dashed border-amber-500/60 p-6 relative overflow-hidden group hover:border-amber-600 transition-colors duration-300 flex flex-col"
+      className="bg-card rounded-xl border border-dashed border-amber-500/60 p-6 relative overflow-hidden group hover:border-amber-600 transition-colors duration-300 flex flex-col w-full max-w-2xl"
     >
       {/* Status Badge */}
       <div className="absolute top-4 right-4 flex items-center space-x-2 bg-amber-500/15 px-3 py-1 rounded-full">
@@ -35,6 +38,24 @@ const ProgressProjectCard = ({
       <h3 className="text-xl font-bold text-textPrimary mt-6 mb-2">
         {title}
       </h3>
+
+      {/* Startup Idea Tag */}
+      <div className="flex items-center mb-3">
+        <span className="inline-flex items-center px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider rounded-full">
+          <FaLightbulb className="mr-2" />
+          Startup Idea
+        </span>
+      </div>
+
+      {image && (
+        <div className="mb-4 rounded-lg overflow-hidden border border-border">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
 
       <p className="text-textMuted text-sm mb-6">
         {description}
@@ -82,12 +103,12 @@ const ProgressProjectCard = ({
 const ProgressProjects = () => {
   const projects = [
     {
-      title: 'F1RACE LIST',
+      title: 'ResearchHub',
       description:
-        'A responsive web application that displays Formula 1 race schedules and standings, with an integrated AI bot to provide race insights, driver stats, and quick summaries.',
-      stack: [SiReact, SiTailwindcss],
-      githubUrl:
-        'https://github.com/2300033794/F1RACE-REPO',
+        'A modern research-paper community platform for discovering, sharing, and discussing academic papers. Built with a responsive React frontend and designed to later integrate with a Node.js, Express.js, and MongoDB backend.',
+      stack: [SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb],
+      githubUrl: 'https://github.com/2300033794/pixel-perfect-view-9131',
+      image: researchhub,
     },
   ];
 
@@ -108,7 +129,7 @@ const ProgressProjects = () => {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        <div className="flex flex-col items-center gap-8">
           {projects.map((project, index) => (
             <ProgressProjectCard
               key={index}
