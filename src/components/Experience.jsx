@@ -15,8 +15,8 @@ const ExperienceCard = ({ role, club, company, duration, description, delay }) =
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
         <div>
           <h3 className="text-xl font-bold text-textPrimary">{role}</h3>
-          <h4 className="text-lg text-primary font-medium">{company}</h4>
-          <h5 className="text-lg text-primary font-medium">{club}</h5>
+          {company && <h4 className="text-lg text-primary font-medium">{company}</h4>}
+          {club && <h5 className="text-lg text-primary font-medium">{club}</h5>}
 
         </div>
         <div className="flex items-center text-textMuted text-sm mt-2 sm:mt-0">
@@ -37,14 +37,14 @@ const Experience = () => {
   const experiences = [
     
     {
-      role: 'Internal Relations Chair',
+      role: 'Technical Team Member',
       club: 'Kognitiv Club',
-      duration: '2023 - Present',
+      company: 'KL University',
+      duration: 'Aug 2024 - Present',
       description: [
-        'Worked on technical tasks related to Full stack and machine learning projects',
-        'Coordinated internal communication and collaboration within the club team',
-        'Managed project timelines and resources to ensure smooth operations',
-        'Contributed to marketing activities and promotional initiatives of the club',
+        'Assisted in organizing and supporting technical sessions and workshops on AI/ML and cloud computing (AWS) for club members.',
+        'Contributed to club blogs and articles, and built small React.js components integrated with REST APIs.',
+        'Coordinated internal communication and collaboration within the club team.',
       ],
     },
   
@@ -62,7 +62,7 @@ const Experience = () => {
     ];
 
   return (
-    <section id="experience" className="py-20 bg-background/50">
+    <section id="experience" className="py-20 bg-surface">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -7,13 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#0B0F1A",
-        card: "#111827",
-        primary: "#4FD1C5",
-        secondary: "#38BDF8",
-        textPrimary: "#E5E7EB",
-        textMuted: "#9CA3AF",
-        border: "rgba(79, 209, 197, 0.3)",
+        background: "#F8FAFC",
+        surface: "#EEF2F7",
+        card: "#FFFFFF",
+        primary: "#0D9488",
+        secondary: "#0284C7",
+        textPrimary: "#0F172A",
+        textMuted: "#475569",
+        border: "rgba(13, 148, 136, 0.35)",
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',

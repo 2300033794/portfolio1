@@ -5,21 +5,24 @@ import {
   FaReact,
   FaNodeJs,
   FaPython,
+  FaJava,
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
   FaDocker,
-  FaAws
+  FaDatabase,
+  FaBrain,
 } from 'react-icons/fa';
 import {
   SiTailwindcss,
-  SiTypescript,
+  SiSpring,
+  SiFastapi,
   SiMongodb,
   SiPostgresql,
-  SiNextdotjs,
-  SiFramer,
-  SiVite,
-  SiRedux
+  SiMysql,
+  SiKubernetes,
+  SiGithubactions,
+  SiOpencv,
 } from 'react-icons/si';
 
 const SkillItem = ({ icon: Icon, name }) => (
@@ -64,41 +67,41 @@ const Skills = () => {
               Programming Languages
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              <SkillItem icon={FaJs} name="JavaScript" />
-              <SkillItem icon={SiTypescript} name="TypeScript" />
+              <SkillItem icon={FaJava} name="Java" />
               <SkillItem icon={FaPython} name="Python" />
+              <SkillItem icon={FaJs} name="JavaScript" />
+              <SkillItem icon={FaDatabase} name="SQL" />
               <SkillItem icon={FaHtml5} name="HTML5" />
               <SkillItem icon={FaCss3Alt} name="CSS" />
-              <SkillItem icon={FaJs} name="[LANG 1]" />
             </div>
           </div>
 
-          {/* Frameworks & Libraries */}
+          {/* Frameworks & AI/ML */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-center text-secondary mb-8">
-              Frameworks & Libraries
+              Frameworks & AI/ML
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              <SkillItem icon={FaReact} name="React" />
-              <SkillItem icon={SiNextdotjs} name="Next.js" />
-              <SkillItem icon={SiTailwindcss} name="Tailwind" />
+              <SkillItem icon={FaReact} name="React.js" />
+              <SkillItem icon={SiSpring} name="Spring Boot" />
+              <SkillItem icon={SiFastapi} name="FastAPI" />
               <SkillItem icon={FaNodeJs} name="Node.js" />
-              <SkillItem icon={SiFramer} name="Framer Motion" />
-              <SkillItem icon={SiRedux} name="Redux" />
+              <SkillItem icon={FaBrain} name="Deep Learning" />
+              <SkillItem icon={SiOpencv} name="YOLOv8" />
             </div>
           </div>
 
-          {/* Tools & Technologies */}
+          {/* Tools & Databases */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-center text-secondary mb-8">
-              Tools & Technologies
+              Tools & Databases
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              <SkillItem icon={FaGitAlt} name="Git" />
               <SkillItem icon={FaDocker} name="Docker" />
-              <SkillItem icon={FaAws} name="AWS" />
-              <SkillItem icon={SiVite} name="Vite" />
-              <SkillItem icon={SiMongodb} name="MongoDB" />
+              <SkillItem icon={SiKubernetes} name="Kubernetes" />
+              <SkillItem icon={FaGitAlt} name="Git" />
+              <SkillItem icon={SiGithubactions} name="GitHub Actions" />
+              <SkillItem icon={SiMysql} name="MySQL" />
               <SkillItem icon={SiPostgresql} name="PostgreSQL" />
             </div>
           </div>

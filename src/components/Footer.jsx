@@ -45,8 +45,21 @@ const Footer = () => {
               K.VIJAY
             </h2>
 
-            <p className="text-textMuted mb-8 max-w-md">
+            <p className="text-textMuted mb-3 max-w-md">
               Building end-to-end web solutions with CI/CD & Machine Learning.
+            </p>
+
+            <p className="text-textMuted mb-8 max-w-md">
+              <a href="tel:+919948332933" className="hover:text-primary transition-colors">
+                +91 9948332933
+              </a>
+              <span className="mx-2">|</span>
+              <a
+                href="mailto:vijaysaikalivarapu@gmail.com"
+                className="hover:text-primary transition-colors"
+              >
+                vijaysaikalivarapu@gmail.com
+              </a>
             </p>
 
             {/* Social Links */}

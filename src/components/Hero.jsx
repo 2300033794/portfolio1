@@ -26,19 +26,32 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-textMuted text-lg max-w-lg leading-relaxed">
-            a developer who enjoys learning and building with code. <br />
-            especially interested in machine learning and love exploring how technology can solve real problems.
+            B.Tech CSE student at K.L. University (CGPA 8.89/10) building full-stack and AI/ML systems. <br />
+            hands-on with React, Spring Boot, FastAPI, Docker & Kubernetes - especially interested in deep learning and love exploring how technology can solve real problems.
           </p>
           
-          <Link to="contact" smooth={true} duration={500} offset={-70}>
-            <motion.button
+          <div className="flex flex-wrap gap-4">
+            <Link to="contact" smooth={true} duration={500} offset={-70}>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-lg hover:shadow-cyan-500/50 transition-shadow cursor-pointer"
+              >
+                Let's Connect
+              </motion.button>
+            </Link>
+
+            <motion.a
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-background font-bold rounded-full shadow-lg hover:shadow-cyan-500/50 transition-shadow cursor-pointer"
+              className="inline-flex items-center px-8 py-3 bg-card border border-border text-textPrimary hover:text-primary hover:border-primary font-bold rounded-full transition-all duration-300"
             >
-              Let's Connect
-            </motion.button>
-          </Link>
+              Download Resume
+            </motion.a>
+          </div>
         </motion.div>
 
         {/* Right Column - Illustration */}

@@ -30,22 +30,22 @@ const EducationCard = ({ institution, degree, duration, score, delay }) => (
 const Education = () => {
   const educationData = [
   {
-    institution: 'KL University, Vijayawada',
-    degree: 'Bachelor’s Degree (3rd Year)',
-    duration: '2023 - Present',
-    score: '8.8 CGPA',
+    institution: 'K.L. University, Guntur',
+    degree: 'B.Tech in Computer Science & Engineering',
+    duration: '2023 - 2027',
+    score: 'CGPA: 8.89/10 - Deep Learning & Full-Stack Specialization',
   },
   {
-    institution: 'Tirumula Junior College, Vizag',
-    degree: 'Intermediate (MPC)',
+    institution: 'Sri Tirumala College, Visakhapatnam',
+    degree: 'Intermediate (Class XII)',
     duration: '2021 - 2023',
-    score: '83.33%',
+    score: '80.3%',
   },
   {
-    institution: 'Sri Chaitanya School, Kommadhi',
-    degree: 'SSC (High School)',
-    duration: '2021',
-    score: '98%',
+    institution: 'Sri Chaitanya School, Visakhapatnam',
+    degree: 'SSC (Class X)',
+    duration: '2010 - 2021',
+    score: '99.5%',
   },
 ];
 

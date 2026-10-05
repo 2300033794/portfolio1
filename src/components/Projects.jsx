@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
-import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb } from 'react-icons/si';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiSpring, SiMysql, SiExpress } from 'react-icons/si';
 
 import project1 from '../assets/projects/project1.jpg';   // ✅ Image import
+import voxstock from '../assets/projects/voxstock.png';   // ✅ Voice-Based Inventory screenshot
 
-const ProjectCard = ({ title, description, stack, githubUrl, image, delay }) => (
+const ProjectCard = ({ title, description, stack, githubUrl, liveUrl, image, delay }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -36,6 +37,19 @@ const ProjectCard = ({ title, description, stack, githubUrl, image, delay }) => 
         >
           <FaGithub size={20} />
         </a>
+
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 p-3 bg-card rounded-full text-primary 
+                       hover:bg-primary hover:text-background 
+                       transition-colors duration-300"
+          >
+            <FaExternalLinkAlt size={20} />
+          </a>
+        )}
       </div>
     </div>
 
@@ -65,15 +79,24 @@ const ProjectCard = ({ title, description, stack, githubUrl, image, delay }) => 
 const Projects = () => {
   const projects = [
     {
-      title: 'Research Journal Management System',
+      title: 'Voice-Based Inventory Management',
       description:
-        'A full-stack web platform with an integrated AI bot that assists in journal submission, review tracking, smart recommendations, and workflow automation through a clean, responsive interface.',
-      stack: [SiReact, SiTailwindcss, SiNodedotjs, SiMongodb],
-      githubUrl:
-        'https://github.com/2300033794/Research-journal-management-system',
-      image: project1,   // ✅ FIXED HERE
+        'A bilingual voice-first inventory and billing system for small retail businesses. Built with React, Node.js, Express and MongoDB for voice-based stock updates, billing, low-stock alerts and real-time inventory management.',
+      stack: [SiReact, SiNodedotjs, SiExpress, SiMongodb],
+      githubUrl: 'https://github.com/2300033794/Voice-Based-Inventory',
+      liveUrl: 'https://voxstock-frontend-latest.onrender.com',
+      image: voxstock,
     },
 
+    {
+      title: 'Research Journal Management System',
+      description:
+        'A full-stack manuscript management system built with Spring Boot, React.js and MySQL, featuring RBAC for authors, reviewers and editors, RESTful APIs for submission, peer review and status tracking, and an optimised database schema to reduce redundancy.',
+      stack: [SiReact, SiSpring, SiTailwindcss, SiMysql],
+      githubUrl: 'https://github.com/2300033794/Research-journal-management',
+      image: project1,
+    },
+  ];
   // {
   // title: 'AI Resume Analyzer',
   // description:
@@ -100,8 +123,6 @@ const Projects = () => {
   // githubUrl: 'https://github.com/yourusername/online-code-judge',
   // image: '/project4.jpg',
   // },
-
-  ];
 
   return (
     <section id="projects" className="py-20 bg-background">
